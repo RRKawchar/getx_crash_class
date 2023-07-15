@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:getx_crash_course/view_model/services/splash_service.dart';
 
 class SplashLightButton extends StatelessWidget {
@@ -10,8 +11,9 @@ class SplashLightButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
         leading: const Icon(Icons.light_mode),
-        title: const Text("Light Theme"),
+        title: Text("light_theme".tr),
         onTap: () {
+
           splashService.changeThemeToLight();
 
         }

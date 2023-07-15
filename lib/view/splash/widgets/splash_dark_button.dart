@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:getx_crash_course/view_model/services/splash_service.dart';
 
 class SplashDarkButton extends StatelessWidget {
@@ -9,7 +10,7 @@ class SplashDarkButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
         leading: const Icon(Icons.dark_mode),
-        title: const Text("Dark Theme"),
+        title:  Text("dark_theme".tr),
         onTap: (){
           splashService.changeThemeToDark();
         }

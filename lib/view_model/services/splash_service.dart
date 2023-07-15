@@ -1,17 +1,17 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_crash_course/view/height_width/height_width_view.dart';
+import 'package:getx_crash_course/view/login/login_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashService {
+
   RxBool showProgress = false.obs;
 
   void timerService() {
     showProgress.value = true;
     Timer(const Duration(seconds: 3), () {
-      Get.to(const HeightWidthView());
+     Get.to(const LoginScreen());
       showProgress.value = false;
     });
   }
